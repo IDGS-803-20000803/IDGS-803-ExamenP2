@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <a href="{{ url_for('main.insert_camara') }}" class="btn btn-outline-success">
+      <i class="fa fa-plus"></i> Agregar Producto </a>
+  </div>
+  <h3 style="margin-top: 50px; text-align: center;">Lista de productos</h3>
+    <table class="table table-light" style="text-align: center;">
+      <thead style="text-transform: uppercase;">
+        <tr class="tr_head">
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Resolucion</th>
+          <th>Alimentacion</th>
+          <th>Precio</th>
+          <th>Existencia</th>
+          <th>Imagen</th>
+          <th>Eliminar</th>
+          <th>Modificar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in camara %}
+        <tr>
+          <td>{{ p.id }}</td>
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.resolucion }}</td>
+          <td>{{ p.alimentacion }}</td>
+          <td>{{ p.precio }}</td>
+          <td>{{ p.existencia }}</td>
+          <td> <img src="../static/img/{{p.imagen}}" width="50px" height="50px" alt=""></td>
+          <td><a href="deleteCamara?id={{ p.id }}" class="btn btn-danger">
+              <i class="icon-remove icon-white"></i>ELIMINAR
+            </a></td>
+          <td><a href="updateCamara?id={{ p.id }}" class="btn btn-warning">
+              <i class="icon-edit icon-white"></i>MODIFICAR
+            </a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

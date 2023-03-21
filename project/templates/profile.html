@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="info__title">
+  !Bienvenido <b style="color: #0379ff"> {{ name }}</b>!
+</h1>
+<div class="row">
+  {% for p in camara %}
+  <div class="col-md-3">
+    <div class="card">
+      <img
+        src="../static/img/{{ p.imagen }}"
+        class="card-img-top"
+        alt="..."
+        style="object-fit: cover; height: 50%"
+      />
+      <div class="card-body" style="text-align: center">
+        <h5 class="card-title" style="color: black">{{ p.nombre }}</h5>
+        <p class="card-text" style="color: black">{{ p.resolucion }}</p>
+        <p class="card-text" style="color: black">{{ p.alimentacion }}</p>
+        <p class="card-" style="color: black">
+          <strong>Precio: $ {{ p.precio }}</strong>
+        </p>
+        <p class="card-" style="color: black">
+          <strong>Existencia:  {{ p.existencia }}</strong>
+        </p>
+      </div>
+      <div class="card-footer align-items-center">
+        <button class="btn btn-primary btn-block">Comprar</button>
+        <button
+          type="button"
+          class="btn btn-outline-success mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#productDetails{{index}}">
+          <i class="fa fa-eye"></i> Ver detalles
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+{% endblock %}

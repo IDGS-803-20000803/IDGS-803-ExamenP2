@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form class="form_container" action="/updateCamara" method="POST"  enctype="multipart/form-data">
+  <div class="title_container">
+    <p class="title">Hick-connect Editar Camara</p>
+  </div>
+  <div class="input_container" style="display:none;">
+    <label class="input_label" for="id_field" >Id</label>
+    <input title="Inpit title" name="id" type="text" class="input_field" id="id_field" value="{{id}}">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="nombre_field" >Nombre</label>
+    <input title="Inpit title" name="nombre" type="text" class="input_field" id="nombre_field" value="{{nombre}}">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="resolucion_field">Resolucion</label>
+    <input  title="Inpit title" name="resolucion" type="text" class="input_field" id="resolucion_field" value="{{resolucion}}">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="alimentacion_field">Alimentacion</label>
+    <input  title="Inpit title" name="alimentacion" type="text" class="input_field" id="alimentacion_field" value="{{alimentacion}}">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="precio_field">Precio</label>
+    <input placeholder="$00.00"  title="Inpit title" name="precio" type="text" class="input_field" id="precio_field" value="{{precio}}">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="existencia_field">Existencia</label>
+    <input  title="Inpit title" name="existencia" type="Number" class="input_field" id="existencia_field" value="{{existencia}}">
+  </div>
+  <div class="form-group">
+    <label for="imagen">Imagen</label>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" id="imagen" name="imagen" required>
+        <label class="custom-file-label" for="imagen">Seleccionar imagen</label>
+    </div>
+</div>
+<div>
+  <img src="../static/img/{{imagen}}" width="90px" height="90px" alt="">
+</div>
+  <button title="Sign In" type="submit" class="sign-in_btn" name="registra">
+    <span>Actualizar</span>
+  </button>
+  <a href="{{ url_for('main.admin') }}" class="btn btn-danger">Cancelar</a>
+</form>
+
+{% endblock %}

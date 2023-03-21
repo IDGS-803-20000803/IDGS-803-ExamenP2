@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container_information">
+    <div id="contact-card" class="card">
+      <h5 id="title-contact" class="card-header">Hick-Connect es el Distribuidor Global Lider</h5>
+      <div class="card-body">
+        <p class="info__content">
+          <b>Nombre de la empresa:</b><br>
+          Hick-Connect
+          <br>
+          <b>Direccion</b><br>
+          Calle valtierr 335, Gto, Leon, CP: 12345, Guanajuato
+          <br>
+          <b>Correo electronico:</b><br>
+          Hick-Connect@gmail.com
+          <br>
+          <b>Telefono:</b><br>
+          +52 4779902312
+          <br>
+          <b>Horario de atencio al cliente:</b><br>
+          Lunes a viernes: 7:00 a.m. - 6:00 p.m. <br>
+          Sabados: 12:00 a.m. - 2:00 p.m. <br>
+          Domingos: cerrado <br>
+        </p>
+        
+      </div>
+    </div>
+    <img class="img_contact" src="../static/img/contacto.png"/>
+    <div class="contact-form">
+      <span class="heading">CONTACTANOS</span>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" required="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="">
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required=""></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    
+    
+</div>
+{% endblock %}

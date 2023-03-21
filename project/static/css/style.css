@@ -1,0 +1,369 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif; 
+}
+nav{
+    position: relative;
+    background: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+}
+nav .menu{
+    max-width: 1250px;
+    background:rgba(31, 35, 58, 0.961);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.menu .logo a{
+    font-family: 'Lilita One', cursive;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.menu ul{
+   display: inline-flex; 
+}
+.menu ul li {
+    margin-top: 15px;
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgb(15, 43, 91);
+    padding:8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+
+.menu ul li a:hover{
+    background: #fff;
+    color:#000;
+}
+.img{
+    background: url(../img/camara.jpg) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.img::before{
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+background: rgba(0, 0, 0, 0.4);
+}
+.center{
+    position: relative;
+    top: 53%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    padding: 0 20px;
+    text-align: center;
+}
+
+.center .title{
+    color: #fff;
+    font-size: 55px;
+    font-weight: 600;
+    font-family: 'Lilita One', cursive;
+
+}
+
+.center .sub_title{
+    color: #fff;
+    font-size: 52px;
+    font-family: 'Lilita One', cursive;
+    font-weight: 600;
+}
+.center .fb-like{
+    text-align: center;
+}
+.razones{
+    display: inline-flex; 
+    background: #000000;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid;
+}
+.razones img{
+    width: 40%;
+    border-radius: 10%;
+}
+.razones p{
+    padding-top: 70px;
+    color: #fff;
+    font-family: 'Lilita One', cursive;
+}
+.container_index{
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid;
+
+}
+.container_index .container__info .info__title{
+    background: #1b1b1b;
+    color: #fff;
+    font-family: 'Lilita One', cursive;
+    font-size: 40px;
+    text-align: center;
+
+}
+.info_main{
+    justify-content: space-between;
+    display: inline-flex; 
+}
+.container__info .info__content{
+    font-family: 'Lilita One', cursive;
+    color: #050343;
+    padding-top: 5%;
+    text-align: justify;
+    position: relative;
+    width:45%;
+    margin-left: 40px;
+
+}
+
+.container__info img{
+    width: 40%;
+    position: relative;
+    
+}
+.container_information{
+    display: inline-flex; 
+}
+
+#contact-card {
+    margin-left: 20px;
+    width: 50%;
+    backdrop-filter: blur(7px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 26px;
+    box-shadow: 35px 35px 68px 0px rgba(157, 177, 255, 0.2), inset -8px -8px 16px 0px rgba(157, 177, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  #contact-card:hover {
+    box-shadow: 35px 35px 68px 0px rgba(157, 177, 255, 0.5);
+  }
+  
+  #contact-card:active {
+    transform: scale(0.95);
+    border: 1px solid blue;
+  }
+
+  #title-contact{
+    font-family: 'Lilita One', cursive;
+    background: #000000;
+    color: #fff;
+    border-radius: 10%;
+  }
+
+
+  .contact-form {
+    margin-left: 10%;
+    margin-right: 2%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .contact-form label {
+    color: black;
+  }
+  
+  .contact-form .heading {
+    font-size: 24px;
+    color: black;
+    ;
+    margin-bottom: 12px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 80px;
+    width: 200px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #0a0aaf;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #1e0abc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .img_contact{
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 20%;
+    height: 50%;
+  }
+  /* Login */
+  .form_container {
+    margin-left: 35%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px 40px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+      0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+      0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .logo_container {
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    background: url(../img/user_login.jpg) no-repeat;
+    border: 1px solid #F7F7F8;
+    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border-radius: 11px;
+  }
+  
+  .title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212121;
+  }
+  
+  .subtitle {
+    font-size: 0.725rem;
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.1rem;
+    color: #8B8E98
+  }
+  
+  .input_container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .icon {
+    width: 20px;
+    position: absolute;
+    z-index: 99;
+    left: 12px;
+    bottom: 9px;
+  }
+  
+  .input_label {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    font-weight: 600;
+  }
+  
+  .input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 40px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
+  }
+  
+  .sign-in_btn {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: #115DFC;
+    border-radius: 7px;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  
+  
+  .separator .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e8e8e8;
+  }
+  
+  .note {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    text-decoration: underline;
+  }

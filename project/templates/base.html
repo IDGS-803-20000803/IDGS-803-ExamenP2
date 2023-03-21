@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web site| Hick-Connect</title>
+  <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="{{ url_for('main.index') }}">Hick-Connect</a>
+      </div>
+      {% if current_user.is_authenticated %}
+      <ul>
+        <li><a href="{{ url_for('main.profile') }}">Catalogo|Camaras</a></li>
+        <li><a href="{{ url_for('main.admin') }}">Administracion</a></li>
+        <li><a href="{{ url_for('auth.logout') }}">Cerrar Sesion</a></li>
+      </ul>
+      {% else %}
+      <ul>
+        <li><a href="{{ url_for('main.index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('main.index') }}">Historia</a></li>
+        <li><a href="{{ url_for('main.contact') }}">Contactanos</a></li>
+        <li><a href="{{ url_for('auth.login') }}">Iniciar Sesion</a></li>
+        <li><a href="{{ url_for('auth.register') }}">Registrarse</a></li>
+      </ul>
+      
+      {% endif %}
+      
+    </div>
+  </nav>
+
+
+  <div class="container_alerts">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+  {% block content %}
+
+  {% endblock %}
+  <script src="../static/bootstrap/js/bootstrap.bundle.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v11.0" nonce="0h7M6HVP"></script>
+</body>
+
+</html>
